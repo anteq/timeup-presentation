@@ -36,17 +36,30 @@
 		<script src="js/reveal.js"></script>
 
 		<script>
+			
+			var parallaxConfigs = [
+				{
+					parallaxId: 'default-parallax',
+					parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+					parallaxBackgroundSize: '2100px 900px'
+				},
+				{
+					parallaxId: 'other-parallax',
+					parallaxBackgroundImage: 'https://www.truehighlands.com/wp-content/uploads/2014/04/bg-parallax-2.png',
+					parallaxBackgroundSize: '1032px 860px'
+				}
+			];
+
+			var currentParallaxConfig = parallaxConfigs[0];
+
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
 				// previewLinks: true,
 				// slideNumber: true,
-				// Parallax background image
-				parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-
-				// Parallax background size
-				parallaxBackgroundSize: '2100px 900px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
-
+				
+				...currentParallaxConfig,
+				
 				// // Number of pixels to move the parallax background per slide
 				// // - Calculated automatically unless specified
 				// // - Set to 0 to disable movement along an axis
@@ -62,6 +75,16 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+
+			Reveal.addEventListener('slidechanged', function( event ) {
+				var newParallax = event.currentSlide.dataset.parallax || 'default-parallax';
+				if (newParallax !== currentParallaxConfig.parallaxId) {
+					currentParallaxConfig = parallaxConfigs.find(x => x.parallaxId === newParallax);
+					Reveal.configure(currentParallaxConfig);
+				}
+				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			} );
+			// 
 		</script>
 	</body>
 </html>
