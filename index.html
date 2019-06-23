@@ -39,8 +39,8 @@
 			
 			var parallaxConfigs =[
             {
-                firstSlideIndex: 0,
-                lastSlideIndex: 5,
+                //firstSlideIndex: 0,
+                //lastSlideIndex: 4,
                 parallaxData:
                 {
                         parallaxId: 'default-parallax',
@@ -49,8 +49,8 @@
                 }
             },
             {
-                firstSlideIndex: 6,
-                lastSlideIndex: 21,
+                //firstSlideIndex: 6,
+                //lastSlideIndex: 21,
 				parallaxData:
                 {
 					parallaxId: 'other-parallax',
@@ -69,7 +69,7 @@
 				// previewLinks: true,
 				// slideNumber: true,
 				
-				...currentParallaxConfig,
+				...currentParallaxConfig.parallaxData,
 				
 				// // Number of pixels to move the parallax background per slide
 				// // - Calculated automatically unless specified
@@ -95,18 +95,22 @@
                 }
             }
 
-			Reveal.addEventListener('slidechanged', function( event ) {
-                if (event.indexv >= currentParallaxConfig.lastSlideIndex){
-                    setTimeout(loadNextParallaxConfig, 4000);
-                }
-                //var currentSlideIndex = Reveal.getIndices( event.currentSlide ).v
+            Reveal.addEventListener('nextparallax', function() {
+                loadNextParallaxConfig()
+            })
+
+			// Reveal.addEventListener('slidechanged', function( event ) {
+                /* var currentSlideIndex = Reveal.getIndices( event.currentSlide ).v
+                if (currentSlideIndex >= currentParallaxConfig.lastSlideIndex){
+                    setTimeout(loadNextParallaxConfig, 2000);
+                } */
 				//var newParallax = event.currentSlide.dataset.parallax || 'default-parallax';
                 /* if (newParallax !== currentParallaxConfig.parallaxData.parallaxId) {
                 currentParallaxConfig = parallaxConfigs.find(x => x.parallaxData.parallaxId === newParallax);
                 Reveal.configure(currentParallaxConfig.parallaxData); */
-				}
+				//}
 				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-			);
+			//);
 			// 
 		</script>
 	</body>
