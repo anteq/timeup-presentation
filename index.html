@@ -8,7 +8,7 @@
 
 		<link rel="shortcut icon" href="img/favicon.png">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/night.css">
+		<link rel="stylesheet" href="css/theme/main.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -91,12 +91,12 @@
                 currentParallaxConfigIndex++;
                 if (currentParallaxConfigIndex < parallaxConfigs.length){
                     currentParallaxConfig = parallaxConfigs[currentParallaxConfigIndex];
-                    Reveal.configure(currentParallaxConfig.parallaxData)
+                    Reveal.configure(currentParallaxConfig.parallaxData);
                 }
             }
 
             Reveal.addEventListener('nextparallax', function() {
-                loadNextParallaxConfig()
+                setTimeout(loadNextParallaxConfig, 2000);
             })
 
 			// Reveal.addEventListener('slidechanged', function( event ) {
