@@ -1,8 +1,4 @@
 # Timeup
-Note:
-Logo warsztatow
-
----
 
 Sample slide
 

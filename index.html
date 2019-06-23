@@ -20,7 +20,7 @@
 			box-shadow: none;
 		}
 		.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-			text-shadow: 0px 0px 15px #000000;
+			/* text-shadow: 0px 0px 15px #000000; */
 		}
 		</style>
 
@@ -37,20 +37,31 @@
 
 		<script>
 			
-			var parallaxConfigs = [
-				{
-					parallaxId: 'default-parallax',
-					parallaxBackgroundImage: 'https://i.imgur.com/0UcDDso.png', //'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-					parallaxBackgroundSize: '1920px 2160px' //'2100px 900px'
-				},
-				{
+			var parallaxConfigs =[
+            {
+                firstSlideIndex: 0,
+                lastSlideIndex: 5,
+                parallaxData:
+                {
+                        parallaxId: 'default-parallax',
+                        parallaxBackgroundImage: 'https://i.imgur.com/0UcDDso.png', //'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                        parallaxBackgroundSize: '1920px 2160px' //'2100px 900px'
+                }
+            },
+            {
+                firstSlideIndex: 6,
+                lastSlideIndex: 21,
+				parallaxData:
+                {
 					parallaxId: 'other-parallax',
 					parallaxBackgroundImage: 'https://i.imgur.com/1nt64mr.png', //'https://www.truehighlands.com/wp-content/uploads/2014/04/bg-parallax-2.png',
 					parallaxBackgroundSize: '1920px 2160px' //'1032px 860px'
 				}
-			];
+            }
+            ];
 
-			var currentParallaxConfig = parallaxConfigs[0];
+            var currentParallaxConfigIndex = 0;
+			var currentParallaxConfig = parallaxConfigs[currentParallaxConfigIndex];
 
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -76,14 +87,26 @@
 				]
 			});
 
+            function loadNextParallaxConfig(){
+                currentParallaxConfigIndex++;
+                if (currentParallaxConfigIndex < parallaxConfigs.length){
+                    currentParallaxConfig = parallaxConfigs[currentParallaxConfigIndex];
+                    Reveal.configure(currentParallaxConfig.parallaxData)
+                }
+            }
+
 			Reveal.addEventListener('slidechanged', function( event ) {
-				var newParallax = event.currentSlide.dataset.parallax || 'default-parallax';
-				if (newParallax !== currentParallaxConfig.parallaxId) {
-					currentParallaxConfig = parallaxConfigs.find(x => x.parallaxId === newParallax);
-					Reveal.configure(currentParallaxConfig);
+                if (event.indexv >= currentParallaxConfig.lastSlideIndex){
+                    setTimeout(loadNextParallaxConfig, 4000);
+                }
+                //var currentSlideIndex = Reveal.getIndices( event.currentSlide ).v
+				//var newParallax = event.currentSlide.dataset.parallax || 'default-parallax';
+                /* if (newParallax !== currentParallaxConfig.parallaxData.parallaxId) {
+                currentParallaxConfig = parallaxConfigs.find(x => x.parallaxData.parallaxId === newParallax);
+                Reveal.configure(currentParallaxConfig.parallaxData); */
 				}
 				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-			} );
+			);
 			// 
 		</script>
 	</body>
