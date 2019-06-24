@@ -10,10 +10,9 @@ W czym problem?
 # Empatyzacja
 
 
-<!-- .slide: data-background-color="black" data-background-transition="slide" -->
+<!-- .slide: data-background-color="black" data-background-transition="slide" data-state="nextparallax" -->
 ![https://imgs.xkcd.com/comics/efficiency.png](https://imgs.xkcd.com/comics/efficiency.png)
 
-<!-- .slide: data-state="nextparallax" -->
 #### sample
 - regular
 - bullet 
