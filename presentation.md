@@ -2,24 +2,24 @@
 
 Problem
 
-## Problemy, które udało nam się zdefiniować
-- Dobra organizacja czasu jest kluczem do szczęścia <!-- .element: class="fragment fade-left" -->
-- Dziecko ustala rytm życia <!-- .element: class="fragment fade-left" -->
-- Nasza aplikacja jest absolutnie niepotrzebna <!-- .element: class="fragment fade-left" -->
+### Problemy, które udało nam się zdefiniować
+- Dobra organizacja czasu jest kluczem do szczęścia
+- Dziecko ustala rytm życia
+- Nasza aplikacja jest absolutnie niepotrzebna
 
-## Faza I
+### Faza I
 ---
 # Empatyzacja
 
-## Faza II
+### Faza II
 ---
 # Definiowanie problemu
-Rodzicom ciężko jest zaplanować czas wolny z dziećmi tak, aby każdy czerpał z niego przyjemność i satysfakcję <!-- .element: class="fragment fade-left" -->
+Rodzicom ciężko jest zaplanować czas wolny z dziećmi tak, aby każdy czerpał z niego przyjemność i satysfakcję
 
-Zmiany próby i problemu podczas kolejnych faz badania
+Zmiany próby i problemu podczas kolejnych faz badania<br>
 Zmiana targetu na młodych rodziców
 
-<!-- .slide: data-background-color="grey" data-background-transition="slide" -->
+<!-- .slide: data-background-color="grey" -->
 ## Faza III
 ---
 # Generowanie pomysłów
@@ -32,16 +32,16 @@ Zmiana targetu na młodych rodziców
 ## Faza IV
 ---
 # Prototypowanie
-{zdjęcie: pop1}
 
-<!-- .slide: data-background-color="grey" data-background-transition="slide" -->
-{zdjęcie: pop2}
+<!-- .slide: data-background-image="img/slides/pop.png" data-background-size="contain" data-background-transition="slide" -->
 
 ## Wnioski z trzeciej fazy badań
 - Nasza aplikacja potrzebuje dodatkowych funkcji
 - Przy projektowaniu rozwiązania nie można zapominać o dzieciach
 
 ## Projektowanie rozwiązania
+
+
 
 <!-- .slide: data-background-color="black" data-background-transition="slide" data-state="nextparallax" -->
 ![https://imgs.xkcd.com/comics/efficiency.png](https://imgs.xkcd.com/comics/efficiency.png)
