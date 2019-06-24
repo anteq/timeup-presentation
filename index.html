@@ -34,31 +34,31 @@
 
 		<script>
 			
-			var parallaxConfigs =[
-            {
-                //firstSlideIndex: 0,
-                //lastSlideIndex: 4,
-                parallaxData:
-                {
-                        parallaxId: 'default-parallax',
-                        parallaxBackgroundImage: 'https://i.imgur.com/0UcDDso.png', //'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-                        parallaxBackgroundSize: '1920px 2160px' //'2100px 900px'
-                }
-            },
-            {
-                //firstSlideIndex: 6,
-                //lastSlideIndex: 21,
-				parallaxData:
-                {
-					parallaxId: 'other-parallax',
-					parallaxBackgroundImage: 'https://i.imgur.com/1nt64mr.png', //'https://www.truehighlands.com/wp-content/uploads/2014/04/bg-parallax-2.png',
-					parallaxBackgroundSize: '1920px 2160px' //'1032px 860px'
-				}
-            }
-            ];
-
-            var currentParallaxConfigIndex = 0;
-			var currentParallaxConfig = parallaxConfigs[currentParallaxConfigIndex];
+//			var parallaxConfigs =[
+//            {
+//                //firstSlideIndex: 0,
+//                //lastSlideIndex: 4,
+//                parallaxData:
+//                {
+//                        parallaxId: 'default-parallax',
+//                        parallaxBackgroundImage: 'https://i.imgur.com/0UcDDso.png', //'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+//                        parallaxBackgroundSize: '1920px 2160px' //'2100px 900px'
+//                }
+//            },
+//            {
+//                //firstSlideIndex: 6,
+//                //lastSlideIndex: 21,
+//				parallaxData:
+//                {
+//					parallaxId: 'other-parallax',
+//					parallaxBackgroundImage: 'https://i.imgur.com/1nt64mr.png', //'https://www.truehighlands.com/wp-content/uploads/2014/04/bg-parallax-2.png',
+//					parallaxBackgroundSize: '1920px 2160px' //'1032px 860px'
+//				}
+//            }
+//            ];
+//
+//            var currentParallaxConfigIndex = 0;
+//			var currentParallaxConfig = parallaxConfigs[currentParallaxConfigIndex];
 
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -70,7 +70,7 @@
 				// previewLinks: true,
 				// slideNumber: true,
 				
-				...currentParallaxConfig.parallaxData,
+				//...currentParallaxConfig.parallaxData,
 				
 				// // Number of pixels to move the parallax background per slide
 				// // - Calculated automatically unless specified
@@ -98,17 +98,17 @@
                 }
             });
 
-            function loadNextParallaxConfig(){
-                currentParallaxConfigIndex++;
-                if (currentParallaxConfigIndex < parallaxConfigs.length){
-                    currentParallaxConfig = parallaxConfigs[currentParallaxConfigIndex];
-                    Reveal.configure(currentParallaxConfig.parallaxData);
-                }
-            }
-
-            Reveal.addEventListener('nextparallax', function() {
-                setTimeout(loadNextParallaxConfig, 2000);
-            })
+//            function loadNextParallaxConfig(){
+//                currentParallaxConfigIndex++;
+//                if (currentParallaxConfigIndex < parallaxConfigs.length){
+//                    currentParallaxConfig = parallaxConfigs[currentParallaxConfigIndex];
+//                    Reveal.configure(currentParallaxConfig.parallaxData);
+//                }
+//            }
+//
+//            Reveal.addEventListener('nextparallax', function() {
+//                setTimeout(loadNextParallaxConfig, 2000);
+//            })
 
 			// Reveal.addEventListener('slidechanged', function( event ) {
                 /* var currentSlideIndex = Reveal.getIndices( event.currentSlide ).v
