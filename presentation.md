@@ -5,7 +5,6 @@ Problem
 ### Problemy, które udało nam się zdefiniować
 - Dobra organizacja czasu jest kluczem do szczęścia
 - Dziecko ustala rytm życia
-- Nasza aplikacja jest absolutnie niepotrzebna
 
 ### Faza I
 ---
