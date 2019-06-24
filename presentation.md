@@ -1,15 +1,14 @@
 # Timeup
 
-Sample slide
+W czym problem?
 
-# This
-## Are
-### Example
-#### Headers
+## Problemy, które udało nam się zdefiniować
+- Dobra organizacja czasu jest kluczem do szczęścia <!-- .element: class="fragment fade-left" -->
+- Dziecko ustala rytm życia <!-- .element: class="fragment fade-left" -->
+- Nasza aplikacja jest absolutnie niepotrzebna <!-- .element: class="fragment fade-left" -->
 
-so this is a slide with a background
-Note:
-Side note to the speaker
+# Empatyzacja
+
 
 <!-- .slide: data-background-color="black" data-background-transition="slide" -->
 ![https://imgs.xkcd.com/comics/efficiency.png](https://imgs.xkcd.com/comics/efficiency.png)
